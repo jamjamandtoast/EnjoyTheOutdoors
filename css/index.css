@@ -1,0 +1,10 @@
+.hero {
+    background-image: url("../Images/frontpage.jpeg");
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: repeat;
+    display: grid;
+    place-items: center;
+    min-height: ;
+}
