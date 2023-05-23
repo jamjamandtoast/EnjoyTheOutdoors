@@ -2,6 +2,24 @@ body{
     background-color: #1B1F24;
 
 }
-h2{
+
+.container {
+    margin-top: 20%; 
+    padding-bottom: 50px; 
+  }
+.container h2 {
+        color: white;
+        
+       
+ }
+
+  .navbar-nav .nav-link {
     color: white;
-}
+  }
+
+  .form-select,
+  .form-control {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
