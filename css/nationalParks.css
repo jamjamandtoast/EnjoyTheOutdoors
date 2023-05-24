@@ -23,3 +23,7 @@ body{
     max-width: 200px;
     margin-bottom: 10px;
   }
+  #divRowParks {
+    display: flex;
+    justify-content: flex-end;
+  }

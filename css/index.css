@@ -1,13 +1,16 @@
 .hero {
-    background-image: url("../Images/frontpage.jpeg");
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-position: center;
-    background-repeat: repeat;
-    display: grid;
-    place-items: center;
-    min-height: 600px;
-}
+     background-image: url("../Images/indexbackground.png");
+     background-size: cover;
+     background-repeat: repeat;
+     display: grid;
+     place-items: center;
+     min-height: 100vh; /* Use viewport height to make it full screen */
+     position: fixed; /* Position the element */
+     bottom: 0; /* Position it at the bottom */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it full width */
+    }
+    
 .h2 {
     font-weight: bolder;
     font-family: 'Courier New', Courier, monospace;
