@@ -11,6 +11,7 @@ window.onload = () => {
     showLocationDrops();
     showParkDrops();
     locationDataDropDown.onchange = dropdownforLocation;
+    ParkDataDropDown.onchange = dropdownforParkType;
   };
   
   function showLocationDrops() {
@@ -26,10 +27,28 @@ window.onload = () => {
       ParkDataDropDown.appendChild(newOption);
     }
   }
+  // checks if the selectedParkType exists in the parkTypesArray. If it does, the park will be included in the ParkTypeFilter array.
+  function dropdownforParkType() {
+    let selectedParkType = ParkDataDropDown.value;
+    const ParkTypeFilter = nationalParksArray.filter(park => park.LocationName.includes(selectedParkType));
+    let parktypedetails = ParkTypeFilter;
+    console.log(parktypedetails);
+    divRowParks.innerHTML = "";
+  
+    if (parktypedetails.length > 0) {
+      for (let park of parktypedetails) {
+        createNationalParkcard(park);
+      }
+    }
+  }
+  
+
+  
+  
   
   function dropdownforLocation() {
     let selectedLocation = locationDataDropDown.value;
-    const parksFilter = nationalParksArray.filter(park => park.State == selectedLocation);
+    const parksFilter = nationalParksArray.filter(park => park.State== selectedLocation);
     let parkDetails = parksFilter;
     console.log(parkDetails);
     divRowParks.innerHTML = "";
@@ -40,20 +59,16 @@ window.onload = () => {
       }
     }
   }
-function dropdownforParkType(){
 
-}
 
-// Show or hide the card based on selection
-    function toggleCardVisibility(show) {
-    let divCards = document.getElementsByClassName("card");
-   
-    }
+
+
+    
   
   
   function createNationalParkcard(park) {
     let divCol = document.createElement("div");
-    divCol.className = "col";
+    divCol.className = "col-4 mx-2 my-3 row";
     divRowParks.appendChild(divCol); 
   
     let divCard = document.createElement("div");
@@ -77,5 +92,32 @@ function dropdownforParkType(){
     listId.className = "parkId";
     listId.innerHTML = park.LocationID;
     unOrderedList.appendChild(listId);
+
+    let parkAdd = document.createElement("li");
+    parkAdd.className = "parkAddy";
+    parkAdd.innerHTML = park.Address;
+    listId.appendChild(parkAdd);
+
+    let parkCity = document.createElement("li");
+    parkCity.className = "parkdaCity";
+    parkCity.innerHTML = park.City;
+    parkAdd.appendChild(parkCity);
+
+    let parkState = document.createElement("li");
+    parkState.className = "parkdaState";
+    parkState.innerHTML = park.State;
+    parkCity.appendChild(parkState);
+
+    let parkZip = document.createElement("li");
+    parkZip.className = "parkdaZip";
+    parkZip.innerHTML = park.ZipCode;
+    parkState.appendChild(parkZip);
+
+    let parkPhone = document.createElement("li");
+    parkPhone.className = "parkdaPhone";
+    parkPhone.innerHTML = park.Phone;
+    parkZip.appendChild(parkPhone);
+
+
   }
   
