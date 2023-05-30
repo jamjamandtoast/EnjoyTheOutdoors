@@ -27,16 +27,13 @@ body {
  */
 
  :root {
-  --red-color: #fb5947;
-  --dark-green: #3a8c94;
-  --darker-green: #1a3642;
+
   --mustard-color: #e9ca88;
-  --beige-color: #cbb995;
+  
 }
 
 html {
   font-size: 62.5%;
-  -webkit-font-smoothing: antialiased;
   height: 100%;
 }
 
@@ -56,7 +53,7 @@ img {
   display: block;
 }
 
-h1,
+ h1,
 h2,
 h3,
 h4,
@@ -86,24 +83,6 @@ h3 {
   font-weight: 600;
 }
 
-h4 {
-  font-size: 1.6rem;
-  line-height: 1.3;
-  font-weight: 300;
-}
-
-h5 {
-  font-size: 1.6rem;
-  line-height: 1.375;
-  font-weight: 400;
-}
-
-h6 {
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 1.4;
-  font-weight: 400;
-}
 
 a {
   cursor: pointer;
@@ -143,7 +122,7 @@ p {
 }
 
 .overlay {
-  background-color: #000000;
+  background-color: #000000;    
   opacity: 0.6;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
   height: 100%;
