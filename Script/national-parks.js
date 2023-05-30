@@ -1,10 +1,12 @@
-
-
 "use strict";
 
 const locationDataDropDown = document.getElementById("locationDataDopdown");
 const ParkDataDropDown = document.getElementById("ParkDataDopdown");
 const divRowParks = document.getElementById("divRowParks");
+const OptionLocation = document.getElementById("OptionLocation");
+const OptionPark = document.getElementById("OptionPark");
+const selectLocationType = document.getElementById("selectLocationType");
+const selectParkType = document.getElementById("selectParkType");
 
 
 window.onload = () => {
@@ -12,7 +14,37 @@ window.onload = () => {
     showParkDrops();
     locationDataDropDown.onchange = dropdownforLocation;
     ParkDataDropDown.onchange = dropdownforParkType;
+
+    
+    OptionLocation.onchange = onOptionLocation;
+    OptionPark.onchange = onOptionPark;
   };
+
+  function onOptionLocation() {
+    if (OptionLocation.checked) {
+      selectLocationType.style.display = "block";
+      selectParkType.style.display = "none";
+      divRowParks.innerHTML = "";
+
+      locationDataDropDown.selectedIndex = 0;
+    } else {
+      selectLocationType.style.display = "block";
+    }
+  }
+
+  function onOptionPark() {
+
+    if (OptionPark.checked) {
+      selectParkType.style.display = "block";
+      selectLocationType.style.display = "none";
+      divRowParks.innerHTML = "";
+     ParkDataDropDown.selectedIndex = 0;
+    } 
+    else {
+      selectParkType.style.display = "none";
+    }
+  }
+  
   
   function showLocationDrops() {
     for (let locationVariable of locationsArray) {

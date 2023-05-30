@@ -7,12 +7,15 @@ body{
     margin-top: 20%; 
     padding-bottom: 50px; 
   }
+.container h1,
 .container h2 {
-        color: white;
-        
+        color: white; 
        
  }
-
+h1{
+  font-size: 56px;
+  
+}
   .navbar-nav .nav-link {
     color: white;
   }
@@ -27,3 +30,15 @@ body{
     display: flex;
     justify-content: flex-end;
   }
+
+  #selectLocationType,
+  #selectParkType {
+    display: none;
+   
+  }
+  .form-check-inline {
+    display: inline-block;
+   margin-left: 18%;
+  color: white;
+  }
+  

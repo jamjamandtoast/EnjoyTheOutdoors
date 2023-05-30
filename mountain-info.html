@@ -10,49 +10,35 @@
   <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"style="color: white;">Adventure Awaits</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon bs-body-bg"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+              <a class="nav-link active" aria-current="page" style="color: white;"  href="index.html">Adventure Awaits</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">National Parks</a>
+              <a class="nav-link"  style="color: white;" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ">Mountains</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+              <a class="nav-link" style="color: white;" href="national-parks.html">National Parks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"style="color: white;" href="mountain-info.html">Mountains</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
-
 <div class="container">
+        <h1>Mountains</h1>
         <h2>Uncover the beauty and secrets of majestic mountains.
            Select your favorite peaks and dive into a wealth of information. 
            Explore heights, landscapes, and intriguing facts.</h2>
         <h2>Start your mountain adventure today.</h2>
-      </div>
-    
-
+        
+        
         <section class="container">
           <!-- Location drop-down -->
           <div id="selectmountainLocation" class="row">
@@ -62,17 +48,18 @@
               </select>
             </div>
           </div>
-
+          
           <div id="mountainRow" class="row">
             <!--     <li><span id="parkId">JEFF</span></li>
-                <li><span id="parkCity">St. Louis</span></li>
-                <li><span id="parkState">Missouri</span></li>
-                <li><span id="parkZipCode">63102</span></li>
-                <li><span id="parkFax">0</span></li> --> 
-      </div> 
-      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="Script/mountainData.js"></script>
-    <script src="Script/mountain-rename.js"></script>
+              <li><span id="parkCity">St. Louis</span></li>
+              <li><span id="parkState">Missouri</span></li>
+              <li><span id="parkZipCode">63102</span></li>
+              <li><span id="parkFax">0</span></li> --> 
+            </div> 
+ </div>
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+            <script src="Script/mountainData.js"></script>
+            <script src="Script/mountain-rename.js"></script>
   </body>
 </html>
