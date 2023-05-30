@@ -1,5 +1,6 @@
 "use strict";
 
+//load element
 const locationDataDropDown = document.getElementById("locationDataDopdown");
 
 const ParkDataDropDown = document.getElementById("ParkDataDopdown");
@@ -27,18 +28,22 @@ window.onload = () => {
     OptionPark.onchange = onOptionPark;
   };
 
-// radio functions here 
+// radio functions here ------------------
 
 // Handle the change event for the OptionLocation radio button
   function onOptionLocation() {
+    //checks if optionlocation radio button is checked
     if (OptionLocation.checked) {
-      selectLocationType.style.display = "block";
+    //if clocation option selected..
+      selectLocationType.style.display = "block"; // makes visivle
       selectParkType.style.display = "none"; // Hide the selectParkType element
       divRowParks.innerHTML = ""; //clear 
 
       locationDataDropDown.selectedIndex = 0; // Reset the selected index of locationDataDropDown
-    } else {
-      selectLocationType.style.display = "block";
+    } 
+    else {
+      //location not checked
+      selectLocationType.style.display = "block"; //selectLocationtype will not be visible
     }
   }
 // Handle the change event for the OptionPark radio button
@@ -55,18 +60,25 @@ window.onload = () => {
     }
   }
   
-  
+
+  // responsible for populating locationdropdown
   function showLocationDrops() {
+
+    //comments for me: function loops through locationarray, creates option for each element
+  
     for (let locationVariable of locationsArray) {
-      let newOption = new Option(locationVariable, locationVariable); // Create a new option element with the locationVariable as both the value and the display text
+      let newOption = new Option(locationVariable, locationVariable); // Create a new option element with the locationVariable 
       locationDataDropDown.appendChild(newOption); // Append  new option element to locationDataDropDown
     }
     }
   
-  
+  // responsible for populating parkdatadropdown
   function showParkDrops() {
+
+  //comments for me: function loops throguh parksarray, creates option for each eleemnt
+
     for (let parkdataVariable of parkTypesArray) {
-      let newOption = new Option(parkdataVariable);
+      let newOption = new Option(parkdataVariable); // create new option with parkdatavarible
       ParkDataDropDown.appendChild(newOption);// apend the new option to parkdatadropdown
     }
   }
