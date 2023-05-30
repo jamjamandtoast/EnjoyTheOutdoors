@@ -1,13 +1,16 @@
 "use strict";
+// Get elements
 
 const mountainlocationDataDopdown = document.getElementById("mountainlocationDataDopdown");
 const mountainRow = document.getElementById("mountainRow");
 
+//load funcrion to window.onload
 
 window.onload = () => {
-  showMountainNameFirst();
-  mountainlocationDataDopdown.onchange = DisplayMountainInfo;
+  showMountainNameFirst(); // display mountain name in the dropdown
+  mountainlocationDataDopdown.onchange = DisplayMountainInfo; // // Call DisplayMountainInfo when dropdown value changes
 }
+
 
 // this will load the function name only from mountainsArray
 function showMountainNameFirst() {
@@ -16,9 +19,11 @@ function showMountainNameFirst() {
     mountainlocationDataDopdown.appendChild(newOption);
   }
 }
+// display selected mountain info
 
 function DisplayMountainInfo() {
   let selectedMountain = mountainlocationDataDopdown.value;
+
   const mountainChoice = mountainsArray.find(mountain => mountain.name === selectedMountain); 
   console.log(mountainChoice);
   mountainRow.innerHTML = ""; // Clear existing content
@@ -28,16 +33,21 @@ function DisplayMountainInfo() {
   }
 }
 
-// this is where the output will be at
+// card workspace here
+
+
 function createMountainCard(mountain) {
+ // creating div element for the column and set its class
   let divCol = document.createElement("div");
   divCol.className = "col mx-2 my-3 row";
   mountainRow.appendChild(divCol);
 
+//divcol element is appended as a child to mountainrow, creat card
   let divCard = document.createElement("div");
   divCard.className = "card";
   divCol.appendChild(divCard);
 
+//create new div, divcard element appended as a child to divcol
   let divCardBody = document.createElement("div");
   divCardBody.className = "card-body";
   divCard.appendChild(divCardBody);
